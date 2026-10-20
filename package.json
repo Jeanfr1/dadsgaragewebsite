@@ -1,0 +1,28 @@
+{
+  "name": "dadsgaragewebsite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Dad's Garage, family-run motorcycle workshop at 73 Vicarage Road, Watford — For the love of bikes.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4203",
+    "prepare-images": "python3 scripts/prepare-images.py",
+    "images": "node scripts/build-images.mjs",
+    "qa": "node scripts/qa.mjs",
+    "compare": "node scripts/board-compare.mjs",
+    "shots": "node scripts/shots.mjs"
+  },
+  "engines": {
+    "node": ">=20.10"
+  },
+  "devDependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/big-shoulders-display": "^5.3.0",
+    "@fontsource-variable/figtree": "^5.3.0",
+    "playwright-core": "^1.64.1",
+    "sharp": "^0.33.5",
+    "vite": "^6.4.4"
+  }
+}

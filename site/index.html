@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1d1b">
+  <title>Dad’s Garage — For the love of bikes. Watford.</title>
+  <meta name="description" content="Independent family motorcycle workshop in Watford. General maintenance, performance, restoration, customising and accident claims support. Any make, model and cc.">
+  <link rel="icon" type="image/png" href="assets/dads-garage-logo.png">
+  <link rel="preload" as="font" href="assets/workshop-display.woff" type="font/woff" crossorigin>
+  <link rel="preload" as="image" href="assets/hero-rear.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#workshop">Skip to the workshop</a>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="Dad’s Garage home"><img src="assets/dads-garage-logo.png" width="128" height="128" alt="Dad’s Garage"></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#workshop">Workshop</a>
+      <a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener noreferrer">Motorcycles <span aria-hidden="true">↗</span></a>
+      <a href="#story">Our story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="motion-toggle" aria-pressed="false" aria-label="Pause animation" title="Pause animation"><span aria-hidden="true">Ⅱ</span></button>
+      <button class="button button-tan header-book" data-dialog="contact-dialog">Book the workshop <span aria-hidden="true">↗</span></button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span class="sr-only">Open menu</span></button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#workshop">Workshop</a><a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener noreferrer">Motorcycles ↗</a><a href="#story">Our story</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- APPROVED: HERO FROM REVISED MODEL 2. Rear three-quarter view. -->
+  <main>
+    <section class="hero-runway" id="top" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-photo"><picture><source media="(max-width: 700px)" srcset="assets/hero-rear-mobile.webp"><img src="assets/hero-rear.webp" alt="Illustrative black Hornet motorcycle viewed from a low rear three-quarter angle in a workshop" width="2048" height="1152" fetchpriority="high"></picture></div>
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="eyebrow intro-line">This is</p>
+          <h1 id="hero-title"><span class="title-mask"><span>DAD’S GARAGE.</span></span></h1>
+          <p class="hero-tagline intro-line">Built around bikes. Run by family.</p>
+        </div>
+        <div class="hero-foot">
+          <a class="scroll-cue" href="#workshop"><span class="cue-line" aria-hidden="true"></span><span>Get to know your garage</span><span aria-hidden="true">↓</span></a>
+          <p class="location">Watford, UK <span aria-hidden="true">/</span> Independent by nature.</p>
+        </div>
+        <div class="chapter-count" aria-hidden="true"><span>01</span><span class="chapter-rule"></span><span>05</span></div>
+      </div>
+    </section>
+
+    <!-- APPROVED: ALL SECTIONS BELOW FROM REVISED MODEL 3, IN THIS ORDER. -->
+    <section id="workshop" class="workshop" aria-labelledby="workshop-title">
+      <div class="service-heading">
+        <p class="section-kicker reveal">01 / The workshop</p>
+        <div class="maintain-line"><h2 id="workshop-title" class="reveal-word">MAINTAIN.</h2><p class="service-aside reveal">Expert care.<br>For the bikes<br>you love.</p></div>
+        <p class="service-subtitle"><span>RESTORE.</span> <span>CUSTOMISE.</span></p>
+      </div>
+      <div class="engine-scene">
+        <img class="engine-photo" src="assets/engine-detail.webp" alt="Illustrative close-up of a motorcycle engine, radiator and exhaust headers" width="2048" height="1152" loading="eager">
+        <div class="engine-vignette"></div>
+        <div class="detail-marker" aria-hidden="true"><span class="marker-cross">+</span><span>The heart of the ride.</span><span class="marker-rule"></span></div>
+      </div>
+      <nav class="service-nav" aria-label="Our workshop services">
+        <button data-service="maintenance">General maintenance <span>↗</span></button>
+        <button data-service="performance">Improving performance <span>↗</span></button>
+        <button data-service="restore">Restore <span>↗</span></button>
+        <button data-service="custom">Customising <span>↗</span></button>
+        <button data-service="claims">Recovery / accident claims <span>↗</span></button>
+      </nav>
+    </section>
+
+    <section id="story" class="story" aria-labelledby="story-title">
+      <div class="story-copy">
+        <p class="section-kicker reveal">02 / A family obsession</p>
+        <h2 id="story-title"><span class="reveal-word">THE GARAGE</span><span class="reveal-word">IS THE PEOPLE.</span></h2>
+        <p class="story-description reveal">A family-run motorcycle workshop in Watford, built on a shared love of bikes. Any make, any model, any cc — from everyday rides to personal projects.</p>
+        <button class="button button-outline reveal" data-dialog="story-dialog">Meet the garage <span aria-hidden="true">↗</span></button>
+      </div>
+      <img class="story-badge" src="assets/dads-garage-logo.png" alt="" width="1024" height="1024" loading="lazy" aria-hidden="true">
+      <div class="story-bottom-rule" aria-hidden="true"></div>
+    </section>
+
+    <section id="contact" class="contact-scene" aria-labelledby="contact-title">
+      <img class="hands-photo" src="assets/hands-workshop.webp" alt="Illustrative monochrome photograph of gloved hands adjusting motorcycle handlebar controls" width="2048" height="1152" loading="lazy">
+      <div class="contact-shade"></div>
+      <div class="contact-card reveal">
+        <p class="section-kicker">03 / Your next chapter</p>
+        <h2 id="contact-title">LET’S TALK BIKES.</h2>
+        <button class="button button-outline-light" data-dialog="contact-dialog">Book the workshop <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav aria-label="Footer navigation"><a href="#workshop">Workshop</a><a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener noreferrer">Motorcycles ↗</a><a href="#story">Our story</a><a href="#contact">Contact</a></nav>
+    <a href="#top" class="footer-logo" aria-label="Back to top"><img src="assets/dads-garage-logo.png" alt="Dad’s Garage" width="128" height="128" loading="lazy"></a>
+    <a class="footer-address" href="https://www.google.com/maps/search/?api=1&query=73+Vicarage+Road+Watford+WD18+0EJ" target="_blank" rel="noopener noreferrer"><span class="pin" aria-hidden="true">⌖</span><span>73 Vicarage Road,<br>Watford, WD18 0EJ <span aria-hidden="true">↗</span></span></a>
+    <div class="footer-bottom"><span>Dad’s Garage · For the love of bikes.</span><span>Independent. Family-run. Watford.</span></div>
+  </footer>
+  <div class="page-progress" aria-hidden="true"></div>
+
+  <dialog id="contact-dialog" aria-labelledby="contact-dialog-title">
+    <button class="dialog-close" data-close aria-label="Close contact information">×</button>
+    <p class="section-kicker">Dad’s Garage / Watford</p>
+    <h2 id="contact-dialog-title">LET’S TALK<br>ABOUT YOUR BIKE.</h2>
+    <p>Call the team to discuss your bike and arrange a workshop visit.</p>
+    <a class="phone-link" href="tel:+447472919010">+44 7472 919010 <span aria-hidden="true">↗</span></a>
+    <address>73 Vicarage Road<br>Watford, WD18 0EJ</address>
+    <div class="dialog-links"><a href="https://www.google.com/maps/search/?api=1&query=73+Vicarage+Road+Watford+WD18+0EJ" target="_blank" rel="noopener noreferrer">Get directions ↗</a><a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+  </dialog>
+  <dialog id="story-dialog" class="story-dialog" aria-labelledby="story-dialog-title">
+    <button class="dialog-close" data-close aria-label="Close our story">×</button>
+    <img src="assets/original-garage-frontage.png" alt="Original photograph supplied for this project: the Dad’s Garage sign above its brick-fronted Watford workshop" width="1177" height="906" loading="lazy">
+    <p class="section-kicker">The original garage</p>
+    <h2 id="story-dialog-title">A FAMILY DREAM.<br>A SHARED PASSION.</h2>
+    <p>Dad’s Garage grew from a family dream, brought to life by Paulo and Ricardo. The workshop welcomes bikes of every make, model and cc, with maintenance, performance work, restoration, customising and accident claims support.</p>
+    <button class="button button-burgundy" data-dialog="contact-dialog">Talk to the team ↗</button>
+  </dialog>
+  <dialog id="service-dialog" aria-labelledby="service-dialog-title">
+    <button class="dialog-close" data-close aria-label="Close service information">×</button>
+    <p class="section-kicker">Dad’s Garage / The workshop</p>
+    <h2 id="service-dialog-title"></h2>
+    <p id="service-dialog-description"></p>
+    <button class="button button-burgundy" data-dialog="contact-dialog">Discuss your bike ↗</button>
+  </dialog>
+  <noscript><p class="no-script">For workshop enquiries, call <a href="tel:+447472919010">+44 7472 919010</a>. Visit us at 73 Vicarage Road, Watford.</p></noscript>
+</body>
+</html>

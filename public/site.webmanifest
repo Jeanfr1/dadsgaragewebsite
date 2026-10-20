@@ -1,0 +1,11 @@
+{
+  "name": "Dad’s Garage",
+  "short_name": "Dad’s Garage",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#181918",
+  "background_color": "#151615",
+  "display": "browser"
+}

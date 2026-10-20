@@ -1,0 +1,50 @@
+[
+  {
+    "file": "site/assets/dads-garage-logo.png",
+    "bytes": 1229186,
+    "sha256": "8ac5be46539e125d5bb28ad783cbdc12f5dcc389596f8fa2025c5d7403498e22",
+    "origin": "imagegen derivative; reconstructed identity"
+  },
+  {
+    "file": "site/assets/engine-detail.webp",
+    "bytes": 240318,
+    "sha256": "bcd319ddaa58750a778156eeb5406bb16bae4f8554229615e5f0240038b680c2",
+    "origin": "imagegen campaign illustration"
+  },
+  {
+    "file": "site/assets/hands-workshop.webp",
+    "bytes": 175016,
+    "sha256": "760ab4073512063a6d5cc7c1122f5f2c526c03cc148c6fb8c8519b7940c64b15",
+    "origin": "imagegen campaign illustration"
+  },
+  {
+    "file": "site/assets/hero-rear-mobile.webp",
+    "bytes": 286056,
+    "sha256": "9107b7328bcd90d4bd78c42a09b90dec860b1a85c6f2e8ccd5b7d04b20bdcfc1",
+    "origin": "imagegen campaign illustration"
+  },
+  {
+    "file": "site/assets/hero-rear.webp",
+    "bytes": 292932,
+    "sha256": "ebe51caf0de17c7468e8bacc0b53d2f46981703d58d95a27a39ffa9db7ba7f26",
+    "origin": "imagegen campaign illustration"
+  },
+  {
+    "file": "site/assets/original-garage-frontage.png",
+    "bytes": 1897201,
+    "sha256": "64ed8dea176e2271ff0d169558820876d5d215b0684a590dfe24fddb98a4e8e8",
+    "origin": "user-supplied unmodified original"
+  },
+  {
+    "file": "site/assets/workshop-display.woff",
+    "bytes": 58280,
+    "sha256": "acef6731dcfc7ba91df20870446c225ee855955a2eb7df7ecd86327bf669ec74",
+    "origin": "licensed local font"
+  },
+  {
+    "file": "site/assets/workshop-text.woff",
+    "bytes": 60912,
+    "sha256": "827b0b0c226a9e1c791f287aaf344b08aa6e33ff05fcaf91cf7fe3daa76ed771",
+    "origin": "licensed local font"
+  }
+]

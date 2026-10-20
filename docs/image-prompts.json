@@ -1,0 +1,38 @@
+[
+  {
+    "key": "hero",
+    "refs": [
+      "references/APPROVED-HERO-model-2.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Deliver only a photorealistic wide landscape 16:9 hero BACKGROUND PHOTOGRAPH with NO website UI. This is an extraction/recomposition of the HERO photograph of the supplied approved Dad's Garage web mockup, not a redesign. Preserve the SAME black naked Honda Hornet, SAME low REAR THREE-QUARTER angle, large rear tire left foreground, front wheel pointing toward right background, correct naked inline four engine, correct forks and physical side stand, same concrete garage environment, maroon original skull logo mural on right wall. Place complete motorcycle in lower middle/right, enough headroom for website heading top-left. Natural real photographic daylight from open door on LEFT, truthful metal and rubber, neutral concrete tones, restrained real exposure, subtle grain. Include workshop tools/shelves consistent with reference. REMOVE header nav, all overlaid 'THIS IS DAD'S GARAGE' lettering and small tagline, buttons, website sections below, body/footer. Keep only the skull mural as the environmental brand sign, accurately copied from reference. Do NOT change camera to front view, do NOT change bike, NO fog, shiny wet floor, light trails, gold glow or render sheen. The final photograph should look like a skilled motorcycle photographer shot it on location. Wide 2048x1152 or larger. Match approved composition closely."
+  },
+  {
+    "key": "engine",
+    "refs": [
+      "references/APPROVED-SECTIONS-model-3.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Extract/recreate ONLY the photographic ENGINE MACRO from the approved web mockup's middle section, the large image below MAINTAIN. RESTORE. CUSTOMISE. and above THE GARAGE IS THE PEOPLE. Deliver a landscape 16:9 full-bleed photo, no website design/text. Same black Honda inline-four motorcycle engine on left/center, radiator on upper-right, dark real metal textured surfaces, bronze exhaust headers, physically plausible hoses/bolts. Identical daytime natural workshop light, photographic realistic exposure and materials, NOT a render, NO colored glow, smoke or retouching shine. The bike's small HONDA casting may remain if naturally legible. No superimposed headlines, navigation, site graphics or labels. Composition should match selected section3 image."
+  },
+  {
+    "key": "hands",
+    "refs": [
+      "references/APPROVED-SECTIONS-model-3.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Extract/recreate ONLY the bottom full-width documentary BLACK AND WHITE photograph of gloved hands working on motorcycle handlebar controls, from approved web mockup section immediately above footer. Deliver a wide 16:9 documentary photo, no site graphics. Two anonymous black mechanic-gloved hands with plausible finger anatomy, one hand holding socket wrench on handlebar clamp, handlebar reservoir at right, real workshop light, deeply realistic grain and tactile metal, no identifiable person. Match section3 composition. Remove burgundy LET'S TALK BIKES panel, CTA, header and footer, all UI/text. No fake credentials or badges."
+  },
+  {
+    "key": "logo",
+    "refs": [
+      "references/logo-source-supplied.png"
+    ],
+    "prompt": "Use case: background-extraction / identity-preserve. Extract and faithfully clean the EXISTING Dad's Garage badge from the Instagram avatar in the reference. Deliver a single centered high-resolution PNG with genuine transparent background. Preserve ORIGINAL design: upper curved warm TAN ribbon reading Dad's in cream oldstyle letters; central cream skull with beige open face helmet, dark goggles, long black beard; dark RED handlebars curling out below skull; tiny circular emblem at base; lower curved tan ribbon reading Garage. Preserve drawing proportions, lettering, exact identity and colors. Remove Instagram pink/orange outer story ring and ALL screenshot UI. Remove black background surrounding badge artwork (black internal beard/goggles remain), no black rectangular/circular backing. No new design, don't invent a new skull or typography, no bevel/metallic treatment, gradients, shadows, wall, paper, extra words. Flat original ink artwork only, clean edges, transparent canvas."
+  },
+  {
+    "key": "mobile",
+    "refs": [
+      "images-master/hero-rear.png"
+    ],
+    "prompt": "Art-directed portrait 4:5 adaptation of the approved rear-three-quarter Hornet workshop photograph. Preserve motorcycle identity, full wheels, natural light and original maroon skull mural; leave dark wall negative space at top. No UI, new angle, fog or gold glow.",
+    "mode": "built-in imagegen; transparent_background=false"
+  }
+]

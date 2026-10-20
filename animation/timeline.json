@@ -1,0 +1,12 @@
+{
+  "approved_composition": {"hero":"revised-model-2", "body":"revised-model-3", "footer":"revised-model-3"},
+  "implementation":"photographic scroll animation; not a true 3D orbit",
+  "site_language":"en-GB",
+  "hero":{"desktop_runway_svh":160,"mobile_runway_svh":127,"desktop_scale":[1,1.38],"mobile_scale":[1,1.2],"desktop_pan_x_px":[0,-46],"mobile_pan_x_px":[0,-10],"pan_y_px":[0,-22],"title_fade_progress":[0.18,0.73],"easing":"smoothstep"},
+  "engine":{"scale":[1.08,1],"translation_y_percent":[-5,-12]},
+  "story_badge":{"rotation_deg":[5,-3],"translation_y_percent":[-47,-53]},
+  "hands":{"translation_y_percent":[-2,-12]},
+  "reveal":{"duration_ms":850,"threshold":0.12,"root_margin_bottom_px":-18},
+  "reduced_motion":{"sticky_runway":false,"parallax":false,"reveals":false,"content_visible":true},
+  "animatic":{"file":"motion-preview.mp4","fps":24,"size":[1280,720],"audio":false,"note":"Edited storyboard, not a browser recording"}
+}

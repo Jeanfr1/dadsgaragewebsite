@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dad’s Garage · Motorcycle workshop in Watford</title>
+  <meta name="description" content="Family-run motorcycle workshop at 73 Vicarage Road, Watford. Maintenance and repair, performance, restoration, customising, accident claims support and recovery, for any make, model and cc.">
+  <!-- TODO(dads): final domain → add canonical + og:url, then drop noindex here, in vercel.json and public/robots.txt -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#181918">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dad’s Garage · For the love of bikes">
+  <meta property="og:description" content="Family-run motorcycle workshop in Watford. Any make, any model, any cc.">
+  <meta property="og:image" content="/img/og-v1.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" as="image" type="image/avif" media="(min-width: 700px) and (min-aspect-ratio: 4/5)"
+        imagesrcset="/img/hero-rear-tall-v1-1280.avif 1280w, /img/hero-rear-tall-v1-1920.avif 1920w, /img/hero-rear-tall-v1-2560.avif 2560w, /img/hero-rear-tall-v1-3344.avif 3344w"
+        imagesizes="(min-aspect-ratio: 1672/1221) 100vw, 137vh">
+  <link rel="preload" as="image" type="image/avif" media="(max-width: 699px), (max-aspect-ratio: 4/5)"
+        imagesrcset="/img/hero-rear-mobile-tall-v1-640.avif 640w, /img/hero-rear-mobile-tall-v1-960.avif 960w, /img/hero-rear-mobile-tall-v1-1280.avif 1280w, /img/hero-rear-mobile-tall-v1-1700.avif 1700w"
+        imagesizes="125vw">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MotorcycleRepair",
+    "name": "Dad’s Garage",
+    "slogan": "For the love of bikes.",
+    "telephone": "+44 7472 919010",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "73 Vicarage Road",
+      "addressLocality": "Watford",
+      "postalCode": "WD18 0EJ",
+      "addressCountry": "GB"
+    },
+    "sameAs": [
+      "https://www.instagram.com/dads.garage.uk/",
+      "https://www.facebook.com/dads.garage.uk",
+      "https://www.tiktok.com/@dadsgaragebypaulo"
+    ]
+  }
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#workshop">Skip to the workshop</a>
+
+  <!-- Header: approved model 2 (revised). -->
+  <header class="masthead" data-state="top">
+    <!-- TODO(dads): replace the reconstructed badge PNG with the owner's master logo file if one exists -->
+    <a class="brand" href="#top" aria-label="Dad’s Garage, back to the top">
+      <picture>
+        <source type="image/webp" srcset="/img/logo-v1-160.webp 160w, /img/logo-v1-320.webp 320w" sizes="(max-width: 699px) 66px, 110px">
+        <img src="/img/logo-v1-320.png" width="320" height="320" alt="Dad’s Garage">
+      </picture>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#workshop">Workshop</a>
+      <a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener">Motorcycles<span class="sr-only"> (Instagram, opens in a new tab)</span></a>
+      <a href="#story">Our story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="masthead-actions">
+      <button class="motion-toggle" type="button" aria-pressed="false" hidden>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M5 3v10M11 3v10"/><path class="i-play" d="M5 3l8 5-8 5z"/></svg>
+        <span class="sr-only">Pause animation</span>
+      </button>
+      <button class="btn btn-tan masthead-book" type="button" data-dialog="contact-dialog">
+        <span>Book the workshop</span>
+        <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="bar"></span><span class="bar"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile" hidden>
+      <a href="#workshop"><span>01</span>Workshop</a>
+      <a href="#repairs"><span>02</span>Repairs</a>
+      <a href="#claims"><span>03</span>Claims &amp; recovery</a>
+      <a href="#shop"><span>04</span>In the shop</a>
+      <a href="#story"><span>05</span>Our story</a>
+      <a href="#team"><span>06</span>The team</a>
+      <a href="#contact"><span>07</span>Contact</a>
+      <a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener"><span>↗</span>Motorcycles on Instagram</a>
+      <a class="mobile-menu-call" href="tel:+447472919010">Call +44 7472 919010</a>
+    </nav>
+  </header>
+
+  <div class="page">
+    <main id="main">
+
+      <!-- 1 · HERO — approved model 2 (revised): the Hornet from behind. -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-stage">
+          <div class="hero-photo">
+            <picture>
+              <source media="(max-width: 699px), (max-aspect-ratio: 4/5)" type="image/avif" sizes="125vw"
+                      srcset="/img/hero-rear-mobile-tall-v1-640.avif 640w, /img/hero-rear-mobile-tall-v1-960.avif 960w, /img/hero-rear-mobile-tall-v1-1280.avif 1280w, /img/hero-rear-mobile-tall-v1-1700.avif 1700w">
+              <source media="(max-width: 699px), (max-aspect-ratio: 4/5)" type="image/webp" sizes="125vw"
+                      srcset="/img/hero-rear-mobile-tall-v1-640.webp 640w, /img/hero-rear-mobile-tall-v1-960.webp 960w, /img/hero-rear-mobile-tall-v1-1280.webp 1280w, /img/hero-rear-mobile-tall-v1-1700.webp 1700w">
+              <source type="image/avif" sizes="(min-aspect-ratio: 1672/1221) 100vw, 137vh"
+                      srcset="/img/hero-rear-tall-v1-1280.avif 1280w, /img/hero-rear-tall-v1-1920.avif 1920w, /img/hero-rear-tall-v1-2560.avif 2560w, /img/hero-rear-tall-v1-3344.avif 3344w">
+              <source type="image/webp" sizes="(min-aspect-ratio: 1672/1221) 100vw, 137vh"
+                      srcset="/img/hero-rear-tall-v1-1280.webp 1280w, /img/hero-rear-tall-v1-1920.webp 1920w, /img/hero-rear-tall-v1-2560.webp 2560w, /img/hero-rear-tall-v1-3344.webp 3344w">
+              <img src="/img/hero-rear-tall-v1-1920.webp" width="3344" height="2442" fetchpriority="high" decoding="async"
+                   alt="A black naked motorcycle seen from behind in a workshop, the Dad’s Garage skull mural on the wall">
+            </picture>
+          </div>
+          <div class="hero-shade" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <p class="hero-kicker">This is</p>
+            <h1 id="hero-title" class="hero-title"><span class="line-mask"><span>Dad’s Garage.</span></span></h1>
+            <p class="hero-tagline">Built around bikes. Run by family.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 · WORKSHOP — approved model 3 (revised): MAINTAIN band, engine, services. -->
+      <section class="workshop" id="workshop" aria-labelledby="workshop-title" data-chapter="01" data-chapter-name="Workshop">
+        <div class="frame workshop-band">
+          <h2 id="workshop-title" class="maintain" aria-label="Maintain. Restore. Customise.">
+            <span class="maintain-word" aria-hidden="true"><span class="ch">M</span><span class="ch">A</span><span class="ch">I</span><span class="ch">N</span><span class="ch">T</span><span class="ch">A</span><span class="ch">I</span><span class="ch">N</span><span class="ch">.</span></span>
+            <span class="actions" aria-hidden="true"><span class="act act-restore">Restore.</span><span class="act act-customise">Customise.</span></span>
+          </h2>
+          <p class="workshop-aside">Expert care.<br>For the bikes<br>you love.</p>
+        </div>
+        <div class="engine">
+          <picture>
+            <source type="image/avif" sizes="100vw" srcset="/img/engine-detail-v1-1280.avif 1280w, /img/engine-detail-v1-1920.avif 1920w, /img/engine-detail-v1-2560.avif 2560w">
+            <source type="image/webp" sizes="100vw" srcset="/img/engine-detail-v1-1280.webp 1280w, /img/engine-detail-v1-1920.webp 1920w, /img/engine-detail-v1-2560.webp 2560w">
+            <img class="engine-photo" src="/img/engine-detail-v1-1920.webp" width="3344" height="1882" loading="lazy" decoding="async"
+                 alt="Close-up of a black inline-four motorcycle engine with its radiator and bronze exhaust headers">
+          </picture>
+        </div>
+        <nav class="frame services" aria-label="Workshop services">
+          <button type="button" data-service="maintenance" data-reveal="up">General maintenance</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-service="performance" data-reveal="up" data-delay="1">Improving performance</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-service="restore" data-reveal="up" data-delay="2">Restore</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-service="custom" data-reveal="up" data-delay="2">Customising</button>
+          <span class="sep" aria-hidden="true"></span>
+          <button type="button" data-service="claims" data-reveal="up" data-delay="3">Recovery / accident claims</button>
+        </nav>
+      </section>
+
+      <!-- 3 · REPAIRS — from the garage's own service list (dadsgaragemotorcycle.co.uk). Its "Heating and AC repair" line is left out: it does not apply to motorcycles. -->
+      <!-- TODO(dads): permission for the workshop, van and team photos taken from the garage's website -->
+      <section class="repairs" id="repairs" aria-labelledby="repairs-title" data-chapter="02" data-chapter-name="Repairs">
+        <div class="frame repairs-grid">
+          <figure class="repairs-photo">
+            <picture>
+              <source type="image/avif" sizes="(max-width: 699px) 100vw, 46vw" srcset="/img/workshop-lift-v1-800.avif 800w, /img/workshop-lift-v1-1200.avif 1200w, /img/workshop-lift-v1-1800.avif 1800w">
+              <source type="image/webp" sizes="(max-width: 699px) 100vw, 46vw" srcset="/img/workshop-lift-v1-800.webp 800w, /img/workshop-lift-v1-1200.webp 1200w, /img/workshop-lift-v1-1800.webp 1800w">
+              <img src="/img/workshop-lift-v1-1200.webp" width="4032" height="3024" loading="lazy" decoding="async"
+                   alt="A matt black Ducati Panigale on the hydraulic lift in the Dad’s Garage workshop">
+            </picture>
+          </figure>
+          <div class="repairs-copy">
+            <p class="kicker" data-reveal="up">Maintenance &amp; repair</p>
+            <h2 id="repairs-title" class="repairs-title" data-reveal="mask"><span class="line-mask"><span>Any make.</span></span><span class="line-mask"><span>Any model.</span></span><span class="line-mask"><span>Any cc.</span></span></h2>
+            <p class="lead" data-reveal="up">Maintenance and repair for motorcycles of every make, model and cc, from the everyday ride to the personal project.</p>
+            <ol class="repair-list">
+              <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle pathLength="1" cx="24" cy="24" r="17"/><circle pathLength="1" cx="24" cy="24" r="6"/><path pathLength="1" d="M24 7v4M24 37v4M7 24h4M37 24h4M12 12l3 3M33 33l3 3M36 12l-3 3M15 33l-3 3"/></svg><span class="no">01</span><span class="name">Brake service and repair</span></li>
+              <li><svg viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M9 18h6l3-4h12l3 4h6v14h-6l-3 4H18l-3-4H9z"/><path pathLength="1" d="M4 22v6M44 22v6M20 22h8M20 27h8"/></svg><span class="no">02</span><span class="name">Engine and transmission repair</span></li>
+              <li><svg viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M14 8h20v34H14z"/><path pathLength="1" d="M19 8V5h10v3M19 22l4 4 7-8M19 34h10"/></svg><span class="no">03</span><span class="name">Maintenance and inspection</span></li>
+              <li><svg viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M20 4v8M28 4v8M17 12h14M24 12v4M18 16l12 4-12 4 12 4-12 4 12 4M24 36v8"/></svg><span class="no">04</span><span class="name">Steering, suspension and wheel alignment</span></li>
+              <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle pathLength="1" cx="24" cy="24" r="19"/><circle pathLength="1" cx="24" cy="24" r="11"/><path pathLength="1" d="M24 5v4M24 39v4M5 24h4M39 24h4M11 11l3 3M34 34l3 3M37 11l-3 3M14 34l-3 3"/></svg><span class="no">05</span><span class="name">Tyre sales and service</span></li>
+              <li><svg viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M6 10h36v24H6zM18 40h12M24 34v6"/><path pathLength="1" d="M10 24h7l3-7 5 13 4-9 2 3h7"/></svg><span class="no">06</span><span class="name">Diagnostic systems</span></li>
+            </ol>
+            <button class="btn btn-line-light" type="button" data-dialog="contact-dialog">
+              <span>Discuss your bike</span>
+              <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 · CLAIMS — the garage's four-step claims guide. -->
+      <section class="claims" id="claims" aria-labelledby="claims-title" data-chapter="03" data-chapter-name="Claims">
+        <div class="claims-stage">
+          <div class="claims-track">
+            <header class="claims-intro">
+              <p class="kicker" data-reveal="up">Claims &amp; recovery</p>
+              <h2 id="claims-title" class="claims-title" data-reveal="up">Make your<br>claim.</h2>
+              <p class="lead" data-reveal="up" data-delay="1">Had an accident? Dad’s Garage can help you claim your losses.</p>
+              <a class="btn btn-wine" href="tel:+447472919010">
+                <span>Call +44 7472 919010</span>
+                <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+              </a>
+            </header>
+            <div class="claims-road" aria-hidden="true"><span class="road-draw"></span></div>
+            <ol class="claims-steps">
+              <li class="step">
+                <span class="step-no" aria-hidden="true">01</span>
+                <h3>Post-accident safety</h3>
+                <p>After your accident, make sure no one is hurt. If anyone is, call an ambulance and the police.</p>
+              </li>
+              <li class="step">
+                <span class="step-no" aria-hidden="true">02</span>
+                <h3>Information exchange</h3>
+                <p>Exchange details with the third party:</p>
+                <ul class="checklist">
+                  <li>Name, address and phone number</li>
+                  <li>Insurance company</li>
+                  <li>Vehicle colour, make, model and plate number</li>
+                  <li>Details of a witness, if possible</li>
+                  <li>Photos and videos of the scene and the vehicles</li>
+                  <li>The exact location of the accident</li>
+                </ul>
+              </li>
+              <!-- TODO(dads): the old site repeats step 01's text under "Rapid response"; this wording is ours, confirm it -->
+              <li class="step">
+                <span class="step-no" aria-hidden="true">03</span>
+                <h3>Rapid response</h3>
+                <p>Once everyone is safe, call the team on <a href="tel:+447472919010">+44 7472 919010</a> and tell us what happened.</p>
+              </li>
+              <li class="step step-photo">
+                <span class="step-no" aria-hidden="true">04</span>
+                <h3>Vehicle rescue and loss recovery</h3>
+                <p>We can rescue your vehicle. We work with a specialist partner to claim your losses and get you a hire vehicle as quickly as possible.</p>
+                <picture>
+                  <source type="image/avif" sizes="(max-width: 699px) 90vw, 26vw" srcset="/img/recovery-van-v1-600.avif 600w, /img/recovery-van-v1-900.avif 900w, /img/recovery-van-v1-1200.avif 1200w">
+                  <source type="image/webp" sizes="(max-width: 699px) 90vw, 26vw" srcset="/img/recovery-van-v1-600.webp 600w, /img/recovery-van-v1-900.webp 900w, /img/recovery-van-v1-1200.webp 1200w">
+                  <img src="/img/recovery-van-v1-900.webp" width="3024" height="4032" loading="lazy" decoding="async"
+                       alt="The Dad’s Garage recovery van, its side listing the services, parked beside a red Triumph">
+                </picture>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · IN THE SHOP — gear sold at the garage. -->
+      <section class="shop" id="shop" aria-labelledby="shop-title" data-chapter="04" data-chapter-name="In the shop">
+        <div class="shop-photo" aria-hidden="true">
+          <picture>
+            <source type="image/avif" sizes="100vw" srcset="/img/shop-helmets-v1-1280.avif 1280w, /img/shop-helmets-v1-1920.avif 1920w, /img/shop-helmets-v1-3024.avif 3024w">
+            <source type="image/webp" sizes="100vw" srcset="/img/shop-helmets-v1-1280.webp 1280w, /img/shop-helmets-v1-1920.webp 1920w, /img/shop-helmets-v1-3024.webp 3024w">
+            <img src="/img/shop-helmets-v1-1920.webp" width="3024" height="720" loading="lazy" decoding="async" alt="">
+          </picture>
+        </div>
+        <div class="shop-marquee" aria-hidden="true">
+          <div class="marquee-row row-a"><span>Accessories</span><span>Helmets</span><span>Gloves</span><span>Boots</span><span>Casual clothing</span><span>Accessories</span><span>Helmets</span><span>Gloves</span><span>Boots</span><span>Casual clothing</span></div>
+          <div class="marquee-row row-b"><span>Gear &amp; clothing</span><span>Helmets</span><span>Accessories</span><span>Gloves</span><span>Boots</span><span>Gear &amp; clothing</span><span>Helmets</span><span>Accessories</span><span>Gloves</span><span>Boots</span></div>
+        </div>
+        <div class="frame shop-copy">
+          <p class="kicker" data-reveal="up">In the shop</p>
+          <h2 id="shop-title" class="shop-title" data-reveal="up">Gear up.</h2>
+          <p class="lead" data-reveal="up" data-delay="1">Accessories, helmets, gloves, boots and casual clothing, in the shop at 73 Vicarage Road. Ask the team what’s in.</p>
+          <a class="btn btn-line-light" href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener">
+            <span>See it on Instagram</span>
+            <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- 6 · STORY — approved model 3 (revised): tan, burgundy title, faint badge. -->
+      <section class="story" id="story" aria-labelledby="story-title" data-chapter="05" data-chapter-name="Our story" data-tone="light">
+        <div class="frame story-frame">
+          <div class="story-copy">
+            <h2 id="story-title" class="story-title" data-reveal="mask"><span class="line-mask"><span>The garage</span></span><span class="line-mask"><span>is the people.</span></span></h2>
+            <p class="story-text" data-reveal="up" data-delay="1">A family-run motorcycle workshop in Watford, built on a shared love of bikes. Any make, any model, any cc, from everyday rides to personal projects.</p>
+            <button class="btn btn-line-dark" type="button" data-dialog="story-dialog">
+              <span>Meet the garage</span>
+              <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+            </button>
+          </div>
+          <img class="story-badge" src="/img/logo-v1-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="">
+        </div>
+      </section>
+
+      <!-- 7 · TEAM — the people behind the garage. -->
+      <!-- TODO(dads): confirm the team and roles are current; bios are condensed from the old site -->
+      <section class="team" id="team" aria-labelledby="team-title" data-chapter="06" data-chapter-name="The team" data-tone="light">
+        <div class="frame">
+          <header class="team-head">
+            <p class="kicker" data-reveal="up">The team</p>
+            <h2 id="team-title" class="team-title" data-reveal="mask"><span class="line-mask"><span>More than</span></span><span class="line-mask"><span>a garage.</span></span></h2>
+            <p class="lead" data-reveal="up" data-delay="1">A lifestyle of people who are passionate about two wheels. To open this garage was a family dream for a long time, and it came alive when Paulo and Ricardo came together to make it happen.</p>
+          </header>
+          <ul class="team-grid">
+            <li class="member">
+              <figure class="member-photo" data-reveal="photo">
+                <picture>
+                  <source type="image/avif" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-paulo-v1-480.avif 480w, /img/team-paulo-v1-720.avif 720w, /img/team-paulo-v1-960.avif 960w">
+                  <source type="image/webp" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-paulo-v1-480.webp 480w, /img/team-paulo-v1-720.webp 720w, /img/team-paulo-v1-960.webp 960w">
+                  <img src="/img/team-paulo-v1-720.webp" width="3024" height="4032" loading="lazy" decoding="async" alt="Paulo working on a chrome cruiser in the workshop">
+                </picture>
+              </figure>
+              <h3 class="member-name">Paulo</h3>
+              <p class="member-role">Chief mechanic</p>
+              <p class="member-bio">The heart of the workshop. Rider for life and mechanic for love, with a start in sales at a multi-brand motorcycle shop and more than ten years as a chief mechanic in London workshops. Professional, honest and a perfectionist.</p>
+            </li>
+            <li class="member">
+              <figure class="member-photo" data-reveal="photo">
+                <picture>
+                  <source type="image/avif" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-ricardo-v1-480.avif 480w, /img/team-ricardo-v1-720.avif 720w, /img/team-ricardo-v1-960.avif 960w">
+                  <source type="image/webp" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-ricardo-v1-480.webp 480w, /img/team-ricardo-v1-720.webp 720w, /img/team-ricardo-v1-960.webp 960w">
+                  <img src="/img/team-ricardo-v1-720.webp" width="3024" height="4032" loading="lazy" decoding="async" alt="Ricardo at the front desk, in front of the helmet wall">
+                </picture>
+              </figure>
+              <h3 class="member-name">Ricardo</h3>
+              <p class="member-role">Manager · Head of accident claims</p>
+              <p class="member-bio">Runs the garage, its accident claims, the finances and customer service. He spent six years at one of the country’s leading claims companies and has a degree in business.</p>
+            </li>
+            <li class="member">
+              <figure class="member-photo" data-reveal="photo">
+                <picture>
+                  <source type="image/avif" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-aline-v1-480.avif 480w, /img/team-aline-v1-720.avif 720w, /img/team-aline-v1-960.avif 960w">
+                  <source type="image/webp" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-aline-v1-480.webp 480w, /img/team-aline-v1-720.webp 720w, /img/team-aline-v1-960.webp 960w">
+                  <img src="/img/team-aline-v1-720.webp" width="3024" height="4032" loading="lazy" decoding="async" alt="Aline at her desk in the shop, helmets on the wall behind her">
+                </picture>
+              </figure>
+              <h3 class="member-name">Aline</h3>
+              <p class="member-role">Finance &amp; administration</p>
+              <p class="member-bio">Looks after the financial and administrative side. Her experience in business management brings efficiency and organisation, and keeps the workshop running smoothly.</p>
+            </li>
+            <li class="member">
+              <figure class="member-photo" data-reveal="photo">
+                <picture>
+                  <source type="image/avif" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-lisa-v1-480.avif 480w, /img/team-lisa-v1-720.avif 720w, /img/team-lisa-v1-960.avif 960w">
+                  <source type="image/webp" sizes="(max-width: 699px) 86vw, 22vw" srcset="/img/team-lisa-v1-480.webp 480w, /img/team-lisa-v1-720.webp 720w, /img/team-lisa-v1-960.webp 960w">
+                  <img src="/img/team-lisa-v1-720.webp" width="3024" height="4032" loading="lazy" decoding="async" alt="Lisa at her desk in the Dad’s Garage office">
+                </picture>
+              </figure>
+              <h3 class="member-name">Lisa</h3>
+              <p class="member-role">Creative &amp; social media</p>
+              <p class="member-bio">The creative soul of the garage, behind the visual communication and social media, from every colour on our pages to the marketing materials and the workshop’s interior design.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8 · CONTACT — approved model 3 (revised): monochrome hands, burgundy card. -->
+      <section class="contact" id="contact" aria-labelledby="contact-title" data-chapter="07" data-chapter-name="Contact">
+        <div class="contact-photo">
+          <picture>
+            <source type="image/avif" sizes="100vw" srcset="/img/hands-workshop-v1-1280.avif 1280w, /img/hands-workshop-v1-1920.avif 1920w, /img/hands-workshop-v1-2560.avif 2560w">
+            <source type="image/webp" sizes="100vw" srcset="/img/hands-workshop-v1-1280.webp 1280w, /img/hands-workshop-v1-1920.webp 1920w, /img/hands-workshop-v1-2560.webp 2560w">
+            <img src="/img/hands-workshop-v1-1920.webp" width="3344" height="1882" loading="lazy" decoding="async"
+                 alt="Black and white close-up of gloved hands tightening a handlebar clamp with a socket wrench">
+          </picture>
+        </div>
+        <div class="frame contact-frame">
+          <div class="contact-card" data-reveal="card">
+            <h2 id="contact-title" class="contact-title">Let’s talk bikes.</h2>
+            <button class="btn btn-line-light" type="button" data-dialog="contact-dialog">
+              <span>Book the workshop</span>
+              <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER — approved model 3 (revised): nav left, badge centre, address right. -->
+    <footer class="footer">
+      <div class="frame footer-main">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#workshop">Workshop</a>
+          <a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener">Motorcycles<span class="sr-only"> (Instagram, opens in a new tab)</span></a>
+          <a href="#story">Our story</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="footer-logo" href="#top" aria-label="Back to the top">
+          <picture>
+            <source type="image/webp" srcset="/img/logo-v1-160.webp 160w, /img/logo-v1-320.webp 320w" sizes="96px">
+            <img src="/img/logo-v1-320.png" width="320" height="320" loading="lazy" decoding="async" alt="Dad’s Garage">
+          </picture>
+        </a>
+        <!-- TODO(dads): swap the name + address search for the garage's own Google place link (cid) once it is known -->
+        <a class="footer-address" href="https://www.google.com/maps/search/?api=1&amp;query=Dad%27s%20Garage%2C%2073%20Vicarage%20Road%2C%20Watford%20WD18%200EJ" target="_blank" rel="noopener">
+          <svg class="pin" viewBox="0 0 16 22" aria-hidden="true"><path d="M8 21s7-7.2 7-12.6A7 7 0 0 0 1 8.4C1 13.8 8 21 8 21z"/><circle cx="8" cy="8.4" r="2.6"/></svg>
+          <span>73 Vicarage Road,<br>Watford WD18 0EJ<span class="sr-only"> (opens Google Maps)</span></span>
+        </a>
+      </div>
+      <div class="frame footer-base">
+        <p>Dad’s Garage · For the love of bikes.</p>
+        <p class="footer-social">
+          <!-- TODO(dads): the shop sign also lists 01923 222455; opening hours are not shown until the owner confirms them -->
+          <a href="tel:+447472919010">+44 7472 919010</a>
+          <a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/dads.garage.uk" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@dadsgaragebypaulo" target="_blank" rel="noopener">TikTok</a>
+        </p>
+        <p>Independent. Family-run. Watford.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Chapter rail: one counter that travels the whole page. -->
+  <div class="rail" aria-hidden="true">
+    <span class="rail-no"><span class="rail-digits">01</span></span>
+    <span class="rail-track"><span class="rail-fill"></span></span>
+    <span class="rail-name">Workshop</span>
+  </div>
+  <div class="page-progress" aria-hidden="true"></div>
+
+  <!-- Dialogs -->
+  <dialog id="contact-dialog" class="sheet" aria-labelledby="contact-dialog-title">
+    <button class="sheet-close" type="button" data-close><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <p class="kicker">Dad’s Garage · Watford</p>
+    <h2 id="contact-dialog-title">Let’s talk<br>about your bike.</h2>
+    <p>Call the team to discuss your bike and arrange a workshop visit.</p>
+    <a class="sheet-phone" href="tel:+447472919010">+44 7472 919010</a>
+    <address>73 Vicarage Road<br>Watford WD18 0EJ</address>
+    <p class="sheet-links">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Dad%27s%20Garage%2C%2073%20Vicarage%20Road%2C%20Watford%20WD18%200EJ" target="_blank" rel="noopener">Get directions</a>
+      <a href="https://www.instagram.com/dads.garage.uk/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/dads.garage.uk" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@dadsgaragebypaulo" target="_blank" rel="noopener">TikTok</a>
+    </p>
+  </dialog>
+
+  <dialog id="story-dialog" class="sheet sheet-story" aria-labelledby="story-dialog-title">
+    <button class="sheet-close" type="button" data-close><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <picture>
+      <source type="image/avif" srcset="/img/frontage-v1-800.avif 800w, /img/frontage-v1-1178.avif 1178w" sizes="(max-width: 699px) 100vw, 640px">
+      <source type="image/webp" srcset="/img/frontage-v1-800.webp 800w, /img/frontage-v1-1178.webp 1178w" sizes="(max-width: 699px) 100vw, 640px">
+      <img src="/img/frontage-v1-800.webp" width="1178" height="908" loading="lazy" decoding="async"
+           alt="The Dad’s Garage sign above the brick-fronted workshop on Vicarage Road, Watford">
+    </picture>
+    <p class="kicker">73 Vicarage Road</p>
+    <h2 id="story-dialog-title">A family dream.<br>A shared passion.</h2>
+    <p>Dad’s Garage grew from a family dream, brought to life by Paulo and Ricardo. The workshop welcomes bikes of every make, model and cc, with maintenance, performance work, restoration, customising and accident claims support.</p>
+    <p>We are delighted to say this is a family business, where we make you feel part of it.</p>
+    <button class="btn btn-wine" type="button" data-dialog="contact-dialog">
+      <span>Talk to the team</span>
+      <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+    </button>
+  </dialog>
+
+  <dialog id="service-dialog" class="sheet" aria-labelledby="service-dialog-title">
+    <button class="sheet-close" type="button" data-close><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <p class="kicker">Dad’s Garage · The workshop</p>
+    <h2 id="service-dialog-title">General maintenance.</h2>
+    <p id="service-dialog-text">Maintenance and repair for motorcycles of any make, model and cc.</p>
+    <button class="btn btn-wine" type="button" data-dialog="contact-dialog">
+      <span>Discuss your bike</span>
+      <svg class="arrow" viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4"/></svg>
+    </button>
+  </dialog>
+
+  <noscript><p class="noscript">For workshop enquiries call <a href="tel:+447472919010">+44 7472 919010</a> or visit 73 Vicarage Road, Watford WD18 0EJ.</p></noscript>
+</body>
+</html>

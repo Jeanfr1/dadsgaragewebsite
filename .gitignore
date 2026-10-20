@@ -1,0 +1,9 @@
+node_modules
+dist
+.vercel
+.DS_Store
+# heavy working copies (rebuild with npm run prepare-images)
+assets-src
+qa
+# Instagram screenshot supplied for the logo: third-party interface, kept local
+references/logo-source-supplied.png

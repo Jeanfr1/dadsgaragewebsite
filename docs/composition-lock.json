@@ -1,0 +1,13 @@
+{
+  "decision":"HERO DO MODELO 2 REVISADO + SEÇÕES DO MODELO 3 REVISADO",
+  "references":{"hero":"references/APPROVED-HERO-model-2.png","body":"references/APPROVED-SECTIONS-model-3.png"},
+  "sequence":[
+    {"id":"top","source":"revised-model-2","headline":"THIS IS / DAD’S GARAGE.","image":"site/assets/hero-rear.webp","camera":"low rear three-quarter; rear wheel left"},
+    {"id":"workshop","source":"revised-model-3","headline":"MAINTAIN. / RESTORE. CUSTOMISE.","image":"site/assets/engine-detail.webp"},
+    {"id":"story","source":"revised-model-3","headline":"THE GARAGE / IS THE PEOPLE.","palette":"tan with burgundy type"},
+    {"id":"contact","source":"revised-model-3","headline":"LET’S TALK BIKES.","image":"site/assets/hands-workshop.webp"},
+    {"id":"footer","source":"revised-model-3","layout":"charcoal; navigation left; badge centre; address right"}
+  ],
+  "excluded_from_body":["IN THE WORKSHOP","YOUR BIKE. YOUR WAY.","model-2 service ledger"],
+  "excluded_old_direction":["gold glow","Royal Enfield hero","wireframe motorcycle","diagonal gold collage"]
+}

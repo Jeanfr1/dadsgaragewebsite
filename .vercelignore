@@ -1,0 +1,13 @@
+# The design kit stays in the repo for reference but is never deployed
+animation
+docs
+images-master
+logo
+references
+site
+tools
+LEIA-ME-KIT.md
+MANIFEST.sha256
+assets-src
+qa
+.github
