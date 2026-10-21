@@ -26,7 +26,7 @@
 
 ## 🚀 Overview
 
-**Dad’s Garage** is an independent motorcycle workshop at 73 Vicarage Road, Watford, started by Paulo and Ricardo as a family dream. Any make, any model, any cc. The site opens on a black naked bike seen from behind, with the garage’s skull badge painted on the wall. As you scroll, the camera **pushes in towards the engine** and hands over to a full-width close-up of it, and the rest of the page follows the bike’s story: the work, the claims help, the shop, the family behind it, and a phone number.
+**Dad’s Garage** is an independent motorcycle workshop at 73 Vicarage Road, Watford, started by Paulo and Ricardo as a family dream. Any make, any model, any cc. The site opens on a big black cruiser with tall bars, seen from behind, with the garage’s skull badge painted on the wall. As you scroll, the camera **pushes in towards the V-twin** and hands over to a full-width engine close-up, and the rest of the page follows the bike’s story: the work, the claims help, the shop, the family behind it, and a phone number.
 
 The look comes from two approved boards: the **hero of revised model 2** and **every section of revised model 3**. The desktop page was rebuilt in the boards’ own pixels and checked against them. The facts that the design kit did not carry (the full repair list, the four-step claims guide, the shop range, the team and the social links) come from the garage’s previous website.
 
@@ -61,7 +61,7 @@ The hero is pinned for 1.6 screen heights (1.27 on phones) and follows the kit�
 **Under the hood**
 
 - 📐 **Board units, not guesses.** Every board text box was measured with a pixel scan (`scripts/measure-board.py`). Font size comes from cap height and tracking from ink width (`scripts/fit-type.mjs`), so the CSS is written in board pixels × `frame / 971` (hero) or `frame / 893` (sections).
-- 🧭 **A plate that fits every screen.** The kit photo was upscaled (Real-ESRGAN blended with Lanczos to keep the grain) and given 280 px of extra wall above it. A `clamp()` keeps the tyres off the bottom edge and the title clear of the mirror on any aspect. Phones and portrait tablets switch to the portrait plate, so both wheels stay in frame.
+- 🧭 **A plate that fits every screen.** The hero photo (the board’s scene, with the cruiser the owner chose) was upscaled (Real-ESRGAN blended with Lanczos to keep the grain) and given 280 px of extra wall above it. A `clamp()` keeps the tyres off the bottom edge and the title clear of both mirrors on any aspect. Phones and portrait tablets switch to the portrait plate, so both wheels stay in frame.
 - 🔁 **One loop for the whole page.** A single `requestAnimationFrame` engine reads the scroll position, eases it only while it moves and writes transforms. It never captures the wheel or blocks anchors. `?nosmooth` and `?static` exist for captures and tests.
 - 🐢 **Graceful by default.** With `prefers-reduced-motion` or the header’s pause button, the runways collapse, nothing is pinned and every section shows its final state.
 
@@ -237,7 +237,7 @@ Items waiting on the garage. Each one is marked `TODO(dads)` in `index.html`.
 - [ ] The garage’s own Google place link (directions currently search by name and address)
 - [ ] Opening hours and the landline on the shop sign (01923 222455), which are not shown until confirmed
 - [ ] The owner’s master logo file (the badge is a clean reconstruction from the avatar)
-- [ ] Sign-off on the hero, engine and hands images from the design kit
+- [ ] Sign-off on the generated hero (cruiser), engine and hands images
 - [ ] Custom domain (then add `canonical` and `og:url` and drop `noindex`)
 
 Brief choices made along the way:

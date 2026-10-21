@@ -10,8 +10,8 @@ const SRC = 'assets-src';
 const OUT = 'public/img';
 
 const photos = {
-  'hero-rear-tall': [1280, 1920, 2560, 3344],
-  'hero-rear-mobile-tall': [640, 960, 1280, 1700],
+  'hero-cruiser-tall': [1280, 1920, 2560, 3344],
+  'hero-cruiser-mobile-tall': [640, 960, 1280, 1700],
   'engine-detail': [1280, 1920, 2560],
   'hands-workshop': [1280, 1920, 2560],
   'team-paulo': [480, 720, 960],
@@ -55,7 +55,7 @@ for (const [name, size] of [['apple-touch-icon.png', 180], ['icon-192.png', 192]
 
 // Social card: the hero plate, 1200x630, with the badge.
 const badge = await sharp(`${SRC}/logo.png`).resize(220).toBuffer();
-await sharp(`${SRC}/hero-rear.png`).resize(1200, 630, { fit: 'cover', position: 'centre' })
+await sharp(`${SRC}/hero-cruiser.png`).resize(1200, 630, { fit: 'cover', position: 'centre' })
   .composite([{ input: badge, top: 28, left: 40 }])
-  .jpeg({ quality: 84, mozjpeg: true }).toFile(`${OUT}/og-${V}.jpg`);
+  .jpeg({ quality: 84, mozjpeg: true }).toFile(`${OUT}/og-v2.jpg`);
 console.log('logo, icons, og done');

@@ -45,7 +45,8 @@ def plates():
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from esrgan import load_model, x2
     net = load_model()
-    for key in ['hero-rear', 'hero-rear-mobile', 'engine-detail', 'hands-workshop']:
+    # hero-cruiser*: the Harley-style cruiser plates supplied on 2026-10-21 (novo-hero/), same scene as the kit hero
+    for key in ['hero-cruiser', 'hero-cruiser-mobile', 'engine-detail', 'hands-workshop']:
         out = os.path.join(SRC, key + '.png')
         if os.path.exists(out) and '--force' not in sys.argv:
             continue
@@ -111,5 +112,5 @@ if __name__ == '__main__':
     live_crops()
     logo()
     plates()
-    extend_top('hero-rear', 560)          # 280 px at the plate's native scale
-    extend_top('hero-rear-mobile', 1000)  # 500 px at the plate's native scale
+    extend_top('hero-cruiser', 560)          # 280 px at the plate's native scale
+    extend_top('hero-cruiser-mobile', 1000)  # 500 px at the plate's native scale

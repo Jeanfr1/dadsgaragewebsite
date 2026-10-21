@@ -32,10 +32,11 @@
   --ease: cubic-bezier(.16, 1, .3, 1);
   --ease-io: cubic-bezier(.65, 0, .35, 1);
 
-  /* header units follow the viewport (the header is fixed, outside the page container) */
-  --mx: calc(min(100vw, 1600px) / 971);
+  /* header units follow the viewport (the header is fixed, outside the page container);
+     like the full-bleed hero photo, they are not capped at the 1600 px content frame */
+  --mx: calc(100vw / 971);
   --mu: min(var(--mx), calc(100svh / 770));
-  --moff: max(0px, calc((100vw - 1600px) / 2));
+  --moff: 0px;
   --head-h: calc(103.5 * var(--mu));
   --s: calc(min(100vw, 1600px) / 893);   /* overridden inside .page by the container width */
 
@@ -188,20 +189,32 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
   position: sticky; top: 0; height: 100svh; min-height: 520px;
   overflow: clip; background: #1c1d1b;
   container-type: size;
-  --hx: calc(min(100cqw, 1600px) / 971);
-  --hu: min(var(--hx), calc(100cqh / 770));
-  --hoff: max(0px, calc((100cqw - 1600px) / 2));
-}
-/* Plate: hero-rear-tall (1672 x 1221 at native scale; 280 px of headroom added above
-   the kit photo). Cover the stage, keep the tyres 25 board-units off the bottom,
-   centre the bike at 51 % like the board. */
-.hero-photo {
+  --hx: calc(100cqw / 971);
+  --hu0: min(var(--hx), calc(100cqh / 770));
+  --hoff: 0px;
+  /* Plate: hero-cruiser-tall (1672 x 1221 at native scale; 280 px of headroom added above
+     the photo). Cover the stage, keep the tyres (y 1175) 25 board-units off the bottom,
+     keep the board's framing of the scene (x 51 %). */
   --k: max(calc(100cqw / 1672), calc(100cqh / 1221));
+  --pl: clamp(calc(100cqw - 1672 * var(--k)), calc(50cqw - 852.7 * var(--k)), 0px);
+  --pt: clamp(calc(100cqh - 1221 * var(--k)), calc(100cqh - 25 * var(--hu0) - 1175 * var(--k)), 0px);
+  /* The cruiser's tall bars reach the title's line. The type keeps its board size unless
+     that would touch a mirror: the title (and the tagline) must either end before the bars
+     (left bar x 740, right mirror x 1085) or sit above the mirror tips (y 568 and 488).
+     "THIS IS" stays at its board distance under the header (146.2 units of --hu0), so a
+     smaller title grows downwards from there: ink bottom = 146.2 hu0 + 142.8 hu. */
+  --tl: calc(var(--hoff) + 141 * var(--hx));
+  --hy: calc(146.2 * var(--hu0) + 18px);
+  --hu: max(calc(var(--hu0) * .5), min(var(--hu0),
+    max(calc((var(--pl) + 740 * var(--k) - 18px - var(--tl)) / 541), calc((var(--pt) + 568 * var(--k) - var(--hy)) / 142.8)),
+    max(calc((var(--pl) + 740 * var(--k) - 18px - var(--tl)) / 313), calc((var(--pt) + 568 * var(--k) - var(--hy)) / 174.8)),
+    max(calc((var(--pl) + 1085 * var(--k) - 18px - var(--tl)) / 541), calc((var(--pt) + 488 * var(--k) - var(--hy)) / 142.8))));
+}
+.hero-photo {
   position: absolute;
   width: calc(1672 * var(--k)); height: calc(1221 * var(--k));
-  left: clamp(calc(100cqw - 1672 * var(--k)), calc(50cqw - 852.7 * var(--k)), 0px);
-  top: clamp(calc(100cqh - 1221 * var(--k)), calc(100cqh - 25 * var(--hu) - 1170 * var(--k)), 0px);
-  transform-origin: 54% 75%;
+  left: var(--pl); top: var(--pt);
+  transform-origin: 55% 74%;
   will-change: transform;
 }
 .hero-photo picture, .hero-photo img { width: 100%; height: 100%; max-width: none; }
@@ -213,7 +226,7 @@ a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation
     linear-gradient(180deg, rgba(14, 14, 13, .35) 0%, rgba(14, 14, 13, 0) 48%);
 }
 .hero-copy {
-  position: absolute; inset: 0 auto auto calc(var(--hoff) + 141 * var(--hx));
+  position: absolute; inset: calc(146.2 * var(--hu0) - 146.2 * var(--hu)) auto auto calc(var(--hoff) + 141 * var(--hx));
   will-change: transform, opacity;
 }
 .hero-kicker, .hero-title, .hero-tagline {
@@ -630,13 +643,13 @@ html.claims-pinned .step-photo picture { aspect-ratio: 5 / 4; }
 
 /* ============ portrait tablets: the portrait plate keeps both wheels in ============ */
 @media (min-width: 700px) and (max-aspect-ratio: 4/5) {
-  .hero-photo {
-    --k: max(calc(100cqw / 898), calc(100cqh / 1902));
-    width: calc(1122 * var(--k)); height: calc(1902 * var(--k));
-    left: clamp(calc(100cqw - 1122 * var(--k)), calc(50cqw - 572 * var(--k)), 0px);
-    top: clamp(calc(100cqh - 1902 * var(--k)), calc(100cqh - 34px - 1725 * var(--k)), 0px);
-    transform-origin: 56% 80%;
+  .hero-stage {
+    --k: max(calc(100cqw / 687), calc(100cqh / 1902));
+    --pl: clamp(calc(100cqw - 1122 * var(--k)), calc(50cqw - 539 * var(--k)), 0px);
+    --pt: clamp(calc(100cqh - 1902 * var(--k)), calc(100cqh - 34px - 1575 * var(--k)), 0px);
+    --hu: var(--hu0);
   }
+  .hero-photo { width: calc(1122 * var(--k)); height: calc(1902 * var(--k)); transform-origin: 55% 71.5%; }
 }
 
 /* ============ phones ============ */
@@ -662,14 +675,14 @@ html.claims-pinned .step-photo picture { aspect-ratio: 5 / 4; }
   .mobile-menu .mobile-menu-call { margin-top: 18px; justify-content: center; border: 0; background: var(--tan); color: #1b1a17; font-size: 15px; letter-spacing: .18em; }
 
   .hero { height: 127svh; }
-  /* Plate: hero-rear-mobile-tall (1122 x 1902; 500 px headroom). Both wheels stay in frame. */
-  .hero-photo {
-    --k: max(calc(100cqw / 898), calc(100cqh / 1902));
-    width: calc(1122 * var(--k)); height: calc(1902 * var(--k));
-    left: clamp(calc(100cqw - 1122 * var(--k)), calc(50cqw - 572 * var(--k)), 0px);
-    top: clamp(calc(100cqh - 1902 * var(--k)), calc(100cqh - 34px - 1725 * var(--k)), 0px);
-    transform-origin: 56% 80%;
+  /* Plate: hero-cruiser-mobile-tall (1122 x 1902; 500 px headroom). The bike (x 230-848) fills
+     about 90 % of the width; both wheels stay in frame. */
+  .hero-stage {
+    --k: max(calc(100cqw / 687), calc(100cqh / 1902));
+    --pl: clamp(calc(100cqw - 1122 * var(--k)), calc(50cqw - 539 * var(--k)), 0px);
+    --pt: clamp(calc(100cqh - 1902 * var(--k)), calc(100cqh - 34px - 1575 * var(--k)), 0px);
   }
+  .hero-photo { width: calc(1122 * var(--k)); height: calc(1902 * var(--k)); transform-origin: 55% 71.5%; }
   .hero-shade { background: linear-gradient(180deg, rgba(14, 14, 13, .55) 0%, rgba(14, 14, 13, .2) 40%, rgba(14, 14, 13, 0) 60%); }
   .hero-copy { left: 22px; right: 22px; top: calc(var(--head-h) + 44px); }
   .hero-kicker { position: static; font-size: 30px; letter-spacing: .12em; }

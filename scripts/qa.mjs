@@ -41,7 +41,7 @@ const loadAll = (page) => page.evaluate(async () => {
     lastImg: document.querySelector('main > section:last-of-type img').getAttribute('src'),
     body: document.body.innerText.toUpperCase(),
   }));
-  ok('hero is model 2: THIS IS / DAD’S GARAGE. over the rear-view plate', t.hero.includes('THIS IS') && t.hero.includes('DAD’S GARAGE.') && /hero-rear(-mobile)?-tall/.test(t.heroImg), t.heroImg.split('/').pop());
+  ok('hero is model 2: THIS IS / DAD’S GARAGE. over the rear-view cruiser plate', t.hero.includes('THIS IS') && t.hero.includes('DAD’S GARAGE.') && /hero-cruiser(-mobile)?-tall/.test(t.heroImg), t.heroImg.split('/').pop());
   ok('first section after the hero says MAINTAIN', /^Maintain\./.test(t.first || ''), t.first);
   ok('tan section says THE GARAGE IS THE PEOPLE.', t.story === 'THE GARAGE IS THE PEOPLE.' && t.storyBg === 'rgb(189, 156, 121)', t.storyBg);
   ok('last visual block: monochrome hands + LET’S TALK BIKES.', t.lastVisual.includes('LET’S TALK BIKES.') && t.lastImg.includes('hands-workshop'));
@@ -104,14 +104,24 @@ for (const [w, hgt, mobile] of [[390, 664, true], [390, 844, true], [430, 932, t
     const p = document.querySelector('.hero-photo').getBoundingClientRect();
     const phone = innerWidth < 700 || innerWidth / innerHeight <= 0.8;
     // plate coordinates (native scale) of the bike: rear tyre left, front tyre right, tyre bottom, mirror tip
-    const plate = phone ? { w: 1122, h: 1902, l: 160, r: 990, b: 1725, mx: 815, my: 1100 } : { w: 1672, h: 1221, l: 370, r: 1230, b: 1170, mx: 1060, my: 535 };
+    // cruiser plates: tyres, lowest tyre contact, mirror tips, mirror heads and the left grip
+    // (plate px including the headroom band)
+    const plate = phone
+      ? { w: 1122, l: 230, r: 848, b: 1575, mirrors: [[725, 1062], [712, 1080], [538, 1122], [515, 1160]] }
+      : { w: 1672, l: 362, r: 1242, b: 1175, mirrors: [[1105, 488], [1085, 500], [780, 568], [740, 610]] };
     const k = p.width / plate.w;
-    const t = document.querySelector('.hero-title span span').getBoundingClientRect();
-    const tag = document.querySelector('.hero-tagline').getBoundingClientRect();
-    return { left: p.left + plate.l * k, right: p.left + plate.r * k, bottom: p.top + plate.b * k, mx: p.left + plate.mx * k, my: p.top + plate.my * k, tR: t.right, tB: t.bottom, tagB: tag.bottom, vw: innerWidth, vh: innerHeight, head: document.querySelector('.masthead').getBoundingClientRect().bottom, tT: t.top };
+    // ink boxes of the Big Shoulders lines (line-height 1: cap top .085em, baseline .885em)
+    const boxes = ['.hero-kicker', '.hero-title', '.hero-tagline'].map((s) => {
+      const e = document.querySelector(s); const r = e.getBoundingClientRect(); const fs = parseFloat(getComputedStyle(e).fontSize);
+      return { left: r.left, right: r.right, top: r.top + 0.085 * fs, bottom: r.bottom - 0.115 * fs };
+    });
+    const pts = plate.mirrors.map(([x, y]) => [p.left + x * k, p.top + y * k]);
+    const hits = pts.filter(([x, y]) => boxes.some((r) => x > r.left - 6 && x < r.right + 6 && y > r.top - 6 && y < r.bottom + 6));
+    const t = boxes[1];
+    return { left: p.left + plate.l * k, right: p.left + plate.r * k, bottom: p.top + plate.b * k, hits: hits.length, m: pts[0], tR: t.right, tB: t.bottom, vw: innerWidth, vh: innerHeight, head: document.querySelector('.masthead').getBoundingClientRect().bottom, tT: boxes[0].top };
   });
   ok(`hero ${w}x${hgt}: both wheels and the tyres inside the frame`, r.left >= 0 && r.right <= r.vw && r.bottom <= r.vh, `L ${r.left.toFixed(0)} R ${r.right.toFixed(0)}/${r.vw} B ${r.bottom.toFixed(0)}/${r.vh}`);
-  ok(`hero ${w}x${hgt}: title clear of the header and the mirror`, r.tT >= r.head - 2 && (r.tR < r.mx || r.tagB < r.my), `title ${r.tR.toFixed(0)},${r.tB.toFixed(0)} mirror ${r.mx.toFixed(0)},${r.my.toFixed(0)}`);
+  ok(`hero ${w}x${hgt}: title clear of the header and both mirrors`, r.tT >= r.head - 2 && r.hits === 0, `title ${r.tR.toFixed(0)},${r.tB.toFixed(0)} mirror ${r.m[0].toFixed(0)},${r.m[1].toFixed(0)}`);
   await ctx.close();
 }
 

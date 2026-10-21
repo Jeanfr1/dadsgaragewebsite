@@ -25,7 +25,7 @@ const loadAll = (p) => p.evaluate(async () => {
     @font-face{font-family:BS;src:url(${fv('big-shoulders-display/files/big-shoulders-display-latin-wght-normal.woff2')}) format('woff2');font-weight:100 900}
     @font-face{font-family:AR;src:url(${fv('archivo/files/archivo-latin-wdth-normal.woff2')}) format('woff2');font-weight:100 900;font-stretch:62% 125%}
     body{margin:0;width:1600px;height:560px;overflow:hidden;background:#151615;font-family:BS}
-    .ph{position:absolute;inset:0;background:url(../../public/img/hero-rear-tall-v1-2560.webp) right -10px bottom -26px/1180px auto no-repeat}
+    .ph{position:absolute;inset:0;background:url(../../public/img/hero-cruiser-tall-v1-2560.webp) right -10px bottom -26px/1180px auto no-repeat}
     .sh{position:absolute;inset:0;background:linear-gradient(90deg,#151615 0%,#151615 30%,rgba(21,22,21,.7) 44%,rgba(21,22,21,0) 62%)}
     .logo{position:absolute;left:96px;top:56px;width:124px}
     .t{position:absolute;left:96px;top:206px;text-transform:uppercase;line-height:1}
